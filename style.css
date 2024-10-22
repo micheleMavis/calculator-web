@@ -10,43 +10,64 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #091921;
+    background: linear-gradient(135deg, #243b55, #141e30); /* Gradient background */
 }
 .calculator{
-    position: relative;
     display: grid;
+    gap: 10px;
+    background: #1c252e;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 .calculator .value{
     grid-column: span 4;
-    height: 100px;
+    height: 80px;
+    background: #101820;
     text-align: right;
     border: none;
     outline: none;
-    padding: 10px;
-    font-size: 18px;
+    padding: 20px;
+    font-size: 2em;
+    color: #fff;
+    border-radius: 10px;
 }
 .calculator span{
     display: grid;
     width: 100px;
     height: 60px;
+    background: #1e3c57;
     color: #fff;
-    background: #0c2835;
+    font-size: 1.5em;
     place-items: center;
-    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Smooth transitions */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+.calculator span:hover{
+    background: #2b5075;
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Deepened shadow */
 }
 .calculator span:active{
-    background: #74ff3b;
+    background: #00ff99;
     color: #111;
+    transform: translateY(2px); /* Button presses in */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 .calculator span.clear{
     grid-column: span 2;
-    width: 200px;
-    background: #ff3077;
+    background: #ff4567;
 }
 .calculator span.plus{
     grid-row: span 2;
-    height: 120px;
+    height: 130px;
 }
 .calculator span.equal{
-    background: #03b1ff;
+    background: #00a8ff;
+    grid-column: span 2;
+}
+.calculator span.equal:hover{
+    background: #0098e0; /* Highlight on equal */
 }
